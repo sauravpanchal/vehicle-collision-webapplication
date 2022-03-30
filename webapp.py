@@ -13,7 +13,8 @@ sl.markdown("###### 🔴NOTE : Options/Filtering are available on left-sidebar."
 
 @sl.cache(persist = True) # it will re-run computation only if code/variable has been changed & it doesn't do computation every-time when we re-run our streamlit app
 def load_data(nrows):
-    data = pd.read_csv("data\\Motor_Vehicle_Collisions.csv", nrows = nrows, parse_dates = [["CRASH_DATE", "CRASH_TIME"]])
+    # data = pd.read_csv("data\\Motor_Vehicle_Collisions.csv", nrows = nrows, parse_dates = [["CRASH_DATE", "CRASH_TIME"]]) # for local machine
+    data = pd.read_csv("https://drive.google.com/file/d/1mKt8rvPK7bErO4YYnnOSFdafRg8JDcGk/view?usp=sharing", nrows = nrows, parse_dates = [["CRASH_DATE", "CRASH_TIME"]])
     data.dropna(subset = ["LATITUDE", "LONGITUDE"], inplace = True)
     lowercase = lambda x : str(x).lower()
     data.rename(lowercase, axis = "columns", inplace = True)
