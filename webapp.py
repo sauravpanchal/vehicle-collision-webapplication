@@ -85,4 +85,4 @@ if sl.checkbox("Show Raw Data", False):
     sl.write(data)
 
 sl.sidebar.subheader("👨🏻‍💻 - Saurav Panchal")
-sl.sidebar.markdown("⚒️ - [Edit Project Here](www.google.com)")
+sl.sidebar.markdown("⚒️ - [Edit Project Here](https://github.com/sauravpanchal/vehicle-collision-webapplication)")
